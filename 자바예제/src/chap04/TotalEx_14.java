@@ -2,42 +2,42 @@ package chap04;
 
 import java.util.Scanner;
 
-public class TotalEx_14 {
+public class Ex_14 {
 
 	public static void main(String[] args) {
 //		int num =0, sum=0;
-//		System.out.print("¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä (¿¹: 12345)>");
+//		System.out.print("ìˆ«ìžë¥¼ ìž…ë ¥í•˜ì„¸ìš” (ì˜ˆ: 12345)>");
 //		Scanner scan = new Scanner(System.in);
-//		String tmp = scan.nextLine();//È­¸éÀ» ÅëÇØ ÀÔ·Â¹ÞÀº ³»¿ë tmp¿¡ ÀúÀå
+//		String tmp = scan.nextLine();//í™”ë©´ì„ í†µí•´ ìž…ë ¥ë°›ì€ ë‚´ìš© tmpì— ì €ìž¥
 //		num = Integer.parseInt(tmp);
 //		
-//		while(num != 0) { //Á¶°Ç½Ä numÀÌ 0ÀÌ µÇ¸é while¹®À» stop
+//		while(num != 0) { //ì¡°ê±´ì‹ numì´ 0ì´ ë˜ë©´ whileë¬¸ì„ stop
 //			
-//			//numÀ» 10À¸·Î ³ª´« ³ª¸ÓÁö¸¦ sum¿¡ ´õÇÔ
-//			sum += num%10;  // sum = sum + num % 10 numÀÇ ¸¶Áö¸· ÀÚ¸®°¡ ³²À½
+//			//numì„ 10ìœ¼ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ë¥¼ sumì— ë”í•¨
+//			sum += num%10;  // sum = sum + num % 10 numì˜ ë§ˆì§€ë§‰ ìžë¦¬ê°€ ë‚¨ìŒ
 //			
 //			System.out.printf("sum =%3d num = %d%n", sum, num);
 //			
-//			num/=10;//numÀ» 10À¸·Î ³ª´« °ªÀ» ´Ù½Ã num¿¡ ÀúÀå  
+//			num/=10;//numì„ 10ìœ¼ë¡œ ë‚˜ëˆˆ ê°’ì„ ë‹¤ì‹œ numì— ì €ìž¥  
 //		}
-//		System.out.println("°¢ ÀÚ¸®¼öÀÇ ÇÕ : "+sum);
+//		System.out.println("ê° ìžë¦¬ìˆ˜ì˜ í•© : "+sum);
 //	
 //	
-	//»ç¿ëÀÚ·ÎºÎÅÍ ¼ýÀÚ¸¦ ÀÔ·Â¹Þ°í ÀÌ ¼ýÀÚÀÇ °¢ ÀÚ¸®ÀÇ ÇÕÀ» ±¸ÇÏ´Â ¿¹Á¦
+	//ì‚¬ìš©ìžë¡œë¶€í„° ìˆ«ìžë¥¼ ìž…ë ¥ë°›ê³  ì´ ìˆ«ìžì˜ ê° ìžë¦¬ì˜ í•©ì„ êµ¬í•˜ëŠ” ì˜ˆì œ
 		int num=0, sum=0;
-		System.out.print("¼ýÀÚ¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("ìˆ«ìžë¥¼ ìž…ë ¥í•˜ì‹œì˜¤ : ");
 		Scanner scan = new Scanner(System.in);
 		String tmp = scan.nextLine();
 		num = Integer.parseInt(tmp);
 		
 		while(num != 0) {
-			sum += num%10; // 10À¸·Î ³ª´« ³ª¸ÓÁö´Â ÀÔ·ÂÇÑ ¼ýÀÚÀÇ ¸¶Áö¸· ¼ýÀÚ
-							//°¢ ¼ýÀÚÀÇ ÇÕÀ» ±¸ÇÒ ¿¹Á¤ÀÌ¹Ç·Î
+			sum += num%10; // 10ìœ¼ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ëŠ” ìž…ë ¥í•œ ìˆ«ìžì˜ ë§ˆì§€ë§‰ ìˆ«ìž
+							//ê° ìˆ«ìžì˜ í•©ì„ êµ¬í•  ì˜ˆì •ì´ë¯€ë¡œ
 			System.out.printf("sum =%3d, num=%d%n", sum, num);
-			num/=10;//numÀ» 10À¸·Î ³ª´©¾î -> ¼øÂ÷ÀûÀ¸·Î numÀÇ ¸¶Áö¸· ¼ýÀÚºÎÅÍ ÇÏ³ª¾¿ ºüÁ®³ª°¨, numÀÌ 0ÀÌ µÇ¸é ¹Ýº¹¹®À» ºüÁ®³ª°¥ ¼ö ÀÖµµ·Ï ÇÔ  
+			num/=10;//numì„ 10ìœ¼ë¡œ ë‚˜ëˆ„ì–´ -> ìˆœì°¨ì ìœ¼ë¡œ numì˜ ë§ˆì§€ë§‰ ìˆ«ìžë¶€í„° í•˜ë‚˜ì”© ë¹ ì ¸ë‚˜ê°, numì´ 0ì´ ë˜ë©´ ë°˜ë³µë¬¸ì„ ë¹ ì ¸ë‚˜ê°ˆ ìˆ˜ ìžˆë„ë¡ í•¨  
 			
 		}
-		System.out.println("°¢ ÀÚ¸®¼öÀÇ ÇÕ : "+sum);
+		System.out.println("ê° ìžë¦¬ìˆ˜ì˜ í•© : "+sum);
 	
 	}
 
