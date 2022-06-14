@@ -9,12 +9,17 @@ public class TotalEx06_20 {
 //		매개변수 : int[] arr - 최대값을 구할 배열
 	
 	
-		int max(int[] arr) {
-			for(int i=0; i<arr.length;i++) {
-				if(arr[i]>arr[i+1]) {
-					
+		static int max(int[] arr) { // 객체생성 안했기때문에 static붙여야함
+			if(arr==null||arr.length==0){ //arr이 null인경우와 크기가 0인경우
+				return -999999;
+			}
+			int max = arr[0];//선언 위치중요, 배열의 첫번째 값으로 최대값을 초기화
+			for(int i=1; i<arr.length;i++) { //[0]번째 값을 max에 넣었으니 그 다음 인덱스부터 체크
+				if(max < arr[i]) {
+					max=arr[i];
 				}
 			}
+			return max;
 		}
 	
 		
