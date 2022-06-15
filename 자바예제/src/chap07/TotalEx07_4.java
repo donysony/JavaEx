@@ -6,11 +6,16 @@ class MyTv{
 	private boolean isPowerOn;
 	private int channel;
 	private int volume;
+	//TotalEx07_5문제로 변수추가
+	private int prevChannel; // 이전채널(previous channel)
 	
 	final int MAX_VOLUME =100;
 	final int MIN_VOLUME =0;
 	final int MAX_CHANNEL =100;
 	final int MIN_CHANNEL =1;
+	
+	
+	
 	
 	//내가 작성한 setChannel메소드	
 //	public void setChannel(int channel){
@@ -30,6 +35,8 @@ class MyTv{
 	public void setChannel(int channel) {
 		if(channel>MAX_CHANNEL||channel<MIN_CHANNEL )
 			return;
+		prevChannel = this.channel; //현재채널을 이전 채널에 저장
+		
 		this.channel = channel;
 	}
 	//내가 작성한 setVolume메소드
@@ -57,11 +64,10 @@ class MyTv{
 	public int getVolume() {
 		return volume;
 	}
-	
-	
-	
-	void gotoPrevChannel() {
-		channel--;
+
+	//TotalEx07_5문제로 메서드 추가
+	public void gotoPrevChannel() {
+		setChannel(prevChannel);//현재 채널을 이전 채널로 변경
 	}
 }
 
